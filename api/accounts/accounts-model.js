@@ -6,7 +6,10 @@ const getAll = () => {
 }
 
 const getById = id => {
-  
+  //* select * from accounts where id = 1
+  return db('accounts').where('id', id).first() 
+  // .where('id', id) resolves to collection 
+  // adding .first() only returns first of that param
 }
 
 const create = account => {
